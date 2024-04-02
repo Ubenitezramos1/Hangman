@@ -46,12 +46,12 @@
         
         <div id="content">
             <legend>Login</legend>
-            <?php
-                if (isset($failed) && $failed == true) { 
-                    echo '<div class="loginError">Invalid Username or Password</div>';
-                }
-            ?>
             <form method="post">
+                <?php
+                    if (isset($failed) && $failed == true) { 
+                        echo '<div class="loginError">Invalid Username or Password</div>';
+                    }
+                ?>
                 <div id="inputBox">
                     <input type="text" name="username" placeholder="Username" required>
                 </div>
