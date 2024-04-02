@@ -11,19 +11,56 @@
 }
 
 form{
-    padding: 10px 0 20px 20px;
-    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin: auto;
+    width: 70%;
+    padding: 15px;
 }
 
 legend{
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    margin-top: 20px;
+    padding-top: 20px;
 }
 
-label {
-    float: left;
+#inputBox input{
+    padding: 15px;
+    border: solid 1px grey;
+    border-radius: 5px;
+    width: 200px;
+}
+
+#links{
+    display: flex;
+    gap: 80px;
+}
+
+#links a{
+    color: #0083f5;
+    text-decoration: none;
+}
+
+#links a:hover{
+    color: #004684;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+input[type="submit"]{
+    width: 80px;
+    height: 30px;
+    color: white;
+    border: solid white;
+    border-radius: 4px;
+    background-color: #0074d9;
+}
+
+input[type="submit"]:hover{
+    background-color: #004684;
 }
 
 .loginError{

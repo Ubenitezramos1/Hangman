@@ -52,14 +52,16 @@
                 }
             ?>
             <form method="post">
-                <label for="username"><strong>Username:</strong></label>
-                <input type="text" name="username" required>
-                <br>
-                <label for="password"><strong>Password:</strong></label>
-                <input type="password" name="password" required>
-                <br>
-                <input type="submit" value="Login">
-                <a href="signup.php">Signup?</a>
+                <div id="inputBox">
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div id="inputBox">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>   
+                <div id="links">             
+                    <a href="signup.php">Signup?</a>
+                    <input type="submit" value="Login">
+                </div>
             </form>
         </div>
     </body>
