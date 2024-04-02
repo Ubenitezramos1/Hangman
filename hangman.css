@@ -1,0 +1,33 @@
+#title{
+    text-align: center;
+}
+
+#content{
+	width: 25em;
+    margin: auto;
+    line-height: 25px;
+    border: solid 1px;
+    border-radius: 25px;
+}
+
+form{
+    padding: 10px 0 20px 20px;
+    line-height: 30px;
+}
+
+legend{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+label {
+    float: left;
+}
+
+.loginError{
+    color: red;
+    padding-left: 20px;
+    padding-top: 10px;
+}
