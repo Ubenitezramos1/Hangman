@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             file_put_contents($file_path, $file_contents);
             // Set a cookie to remember the user
             setcookie("username", $username, time() + (86400 * 30), "/");
-            header("Location: gameselect.html");
+            header("Location: gameselect.php");
             exit();
         } else {
             $error = "Username already exists.";
