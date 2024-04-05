@@ -3,7 +3,7 @@
     src: url('ArchivoBlack-Regular (1).ttf');
 }
 
-body {
+head {
     background-image: url('hangman_loginBG.jpeg');
 }
 #title {
