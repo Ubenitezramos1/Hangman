@@ -3,6 +3,11 @@
     src: url('ArchivoBlack-Regular (1).ttf');
 }
 
+@font-face {
+    font-family: 'ShadowsIntoLight';
+    src: url('ShadowsIntoLight.ttf')
+}
+
 body {
     background-image: url('hangman_loginBG.jpeg');
     background-size: cover;
@@ -19,11 +24,8 @@ body {
 				  -3px -3px 0 #000;
 }
 
-@font-face{
-    font-family: 'ShadowsntoLight';
-    src: url('ShadowsIntoLight.ttf');
-}
 #content{
+    font-family: 'ShadowsIntoLight';
 	width: 300px;
     margin: 0 auto;
     position: absolute;
