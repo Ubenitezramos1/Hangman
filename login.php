@@ -45,6 +45,7 @@ function userCheck($username, $password, $file_path) {
     <link href="hangman.css" rel="stylesheet">
 </head>
 <body>
+<img src="hangman.png" alt="Swinging Image" class="swinging-image">
     <h1 id="title">Web Wizard's Hangman</h1>
     <div id="content">
         <legend>Login</legend>

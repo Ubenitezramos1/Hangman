@@ -127,4 +127,18 @@ input[type="submit"]:hover{
   #logoutHeader:hover a {
     color: #f9e79f;
   }
+
+.swinging-image {
+    position: fixed;
+    top: 0;
+    right: 0;
+    animation: swing 2s infinite alternate; /* Adjust duration as needed */
+    transform-origin: top right;
+}
+
+@keyframes swing {
+    0% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    100% { transform: rotate(10deg); }
+}
   
