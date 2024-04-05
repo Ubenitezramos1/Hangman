@@ -25,6 +25,8 @@ body {
 }
 
 #content{
+    font-family: 'ShadowsIntoLight';
+    font-size: 20px;
 	width: 300px;
     margin: 0 auto;
     position: absolute;
