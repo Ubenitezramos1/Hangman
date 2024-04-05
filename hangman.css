@@ -134,6 +134,8 @@ input[type="submit"]:hover{
     right: 0;
     animation: swing 2s infinite alternate; /* Adjust duration as needed */
     transform-origin: top right;
+    width: 100px;
+    height: auto;
 }
 
 @keyframes swing {
