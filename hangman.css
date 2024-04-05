@@ -3,6 +3,9 @@
     src: url('ArchivoBlack-Regular (1).ttf');
 }
 
+body {
+    background-image: src('hangman_loginBG.jpeg')
+}
 #title {
     font-family: 'ArchivoBlack';
     text-align: center;
