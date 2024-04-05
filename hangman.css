@@ -1,6 +1,6 @@
-body {
-    font-family: Arial, sans-serif;
-    background: url('hangman_loginBG.jpeg');
+@font-face {
+    font-family: 'ArchivoBlack';
+    src: url('ArchivoBlack-Regular (1).ttf');
 }
 
 #title {
