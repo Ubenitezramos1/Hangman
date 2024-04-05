@@ -1,4 +1,7 @@
-
+@font-face {
+    font-family: 'ArchivoBlack';
+    src: url('ArchivoBlack-Regular (1).ttf');
+}
 
 @font-face {
     font-family: 'ShadowsIntoLight';
@@ -11,7 +14,7 @@ body {
     background-position: center;
 }
 #title {
-    font-family: 'ArchivoBlack';
+    font-family: 'ShadowsIntoLight';
     font-size: 60px;
     color: #ff6361;
     text-align: center;
