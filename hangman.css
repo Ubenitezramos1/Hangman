@@ -3,20 +3,21 @@
     src: url('ArchivoBlack-Regular (1).ttf');
 }
 
-body {
-    background-color: #007bff;
-}
+
 #title {
     font-family: 'ArchivoBlack';
     text-align: center;
 }
 
 #content{
-	width: 25em;
-    margin: auto;
+	width: 300 px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20 px
     line-height: 25px;
     border: solid 1px;
     border-radius: 25px;
+    box-shadow: 0 0 10 px rgba(0,0,0,0.1)
 }
 
 form{
@@ -40,7 +41,7 @@ legend{
     padding: 15px;
     border: solid 1px grey;
     border-radius: 5px;
-    width: 200px;
+    width: 50%;
 }
 
 #links{
