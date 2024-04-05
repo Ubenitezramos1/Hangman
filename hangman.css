@@ -4,7 +4,9 @@
 }
 
 body {
-    background-color: url('hangman_loginBG.jpeg');
+    background-image: url('hangman_loginBG.jpeg');
+    background-size: cover;
+    background-position: center;
 }
 #title {
     font-family: 'ArchivoBlack';
