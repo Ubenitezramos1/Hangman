@@ -3,9 +3,44 @@
 <html>
     <head>
         <title></title>
-        <link href="" rel="stylesheet">
+        <link href="gamepage.css" rel="stylesheet">
     </head>
-    <body>
-
+    <body id="body">
+        <div id="hangman">
+            <div class="gallows-top"></div>
+            <div class="gallows-stand"></div>
+            <div class="rope"></div>
+            <div class="head"></div>
+            <div class="body"></div>
+            <div class="arm left-arm"></div>
+            <div class="arm right-arm"></div>
+            <div class="leg left-leg"></div>
+            <div class="leg right-leg"></div>
+        </div>
+        <div id="dashes">
+            <div class="dash"></div>
+            <div class="dash"></div>
+            <div class="dash"></div>
+            <div class="dash"></div>
+        </div>
+        <div id="alphabet-buttons">
+        <?php
+        $rows = [
+            ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'],
+            ['J', 'K', 'L', 'M', 'N', 'O', 'P'],
+            ['Q', 'R', 'S', 'T', 'U'],
+            ['V', 'W', 'X'],
+            ['Y', 'Z']
+        ];
+        
+        foreach ($rows as $letters) {
+            echo "<div class='button-row'>";
+            foreach ($letters as $letter) {
+                echo "<button class='alphabet-btn'>$letter</button>";
+            }
+            echo "</div>";
+        }
+        ?>
+    </div>
     </body>
 </html>
