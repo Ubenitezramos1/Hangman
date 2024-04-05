@@ -37,11 +37,15 @@ legend{
     padding-top: 20px;
 }
 
+#inputBox {
+    margin-bottom: 10px;
+}
+
 #inputBox input{
     padding: 15px;
     border: solid 1px grey;
     border-radius: 5px;
-    width: 50%;
+    width: 20%;
 }
 
 #links{
