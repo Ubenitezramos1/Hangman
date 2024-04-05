@@ -22,7 +22,7 @@ body {
 #content{
 	width: 300px;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
+    background-color: rgba(210, 180, 140, 0.8); /* Transparent background */
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
