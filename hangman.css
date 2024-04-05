@@ -1,9 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    background: url('hangman_loginBG.jpeg')
+    background: url('hangman_loginBG.jpeg');
 }
-#title{
-    font-family: 'Shadows Into Light'
+
+#title {
+    font-family: 'Shadows Into Light';
     text-align: center;
 }
 
