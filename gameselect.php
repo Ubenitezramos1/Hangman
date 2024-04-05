@@ -3,9 +3,10 @@
 <html>
     <head>
         <title></title>
-        <link href="" rel="stylesheet">
+        <link href="hangman.css" rel="stylesheet">
     </head>
     <body>
+        <?php include 'header.php'; ?>
 
     </body>
 </html>
