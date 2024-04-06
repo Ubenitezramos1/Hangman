@@ -22,6 +22,10 @@ if ($response !== false) {
 
         // Initialize blank spaces based on word length
         $blank_spaces = str_repeat("_", $word_length);
+
+        // Use the random word in your PHP code
+        echo "Random word: " . $randomWord;
+        
     } else {
         echo "Invalid response from the API.";
         exit; // Exit if response is invalid
