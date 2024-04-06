@@ -75,8 +75,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 <div id="alphabet-buttons">
     <?php
-    <div id="alphabet-buttons">
-    <?php
     $rows = [
         ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'],
         ['J', 'K', 'L', 'M', 'N', 'O', 'P'],
