@@ -75,6 +75,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 <div id="alphabet-buttons">
     <?php
+    <div id="alphabet-buttons">
+    <?php
     $rows = [
         ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'],
         ['J', 'K', 'L', 'M', 'N', 'O', 'P'],
@@ -82,14 +84,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ['V', 'W', 'X'],
         ['Y', 'Z']
     ];
+    
+    foreach ($rows as $letters) {
+        echo "<div class='button-row'>";
+        foreach ($letters as $letter) {
+            echo "<button class='alphabet-btn'>$letter</button>";
+        }
+        echo "</div>";
+    }
     ?>
+</div>
 </div>
 </body>
 </html>
-$rows = [
-            ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'],
-            ['J', 'K', 'L', 'M', 'N', 'O', 'P'],
-            ['Q', 'R', 'S', 'T', 'U'],
-            ['V', 'W', 'X'],
-            ['Y', 'Z']
-        ];
