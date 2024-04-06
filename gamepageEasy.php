@@ -1,4 +1,31 @@
 <!--Gamepage: this is where the game will be played depending on the difficulty chosen-->
+<?php
+// Set the API URL
+$apiUrl = "https://random-word-api.herokuapp.com/word";
+
+// Make an HTTP request to the API
+$response = file_get_contents($apiUrl);
+
+// Check if the request was successful
+if ($response !== false) {
+    // Parse the JSON response
+    $data = json_decode($response, true);
+
+    // Check if the response contains the expected data
+    if (is_array($data) && !empty($data)) {
+        // Get the random word from the response
+        $randomWord = $data[0];
+
+        // Use the random word in your PHP code
+        echo "Random word: " . $randomWord;
+    } else {
+        echo "Invalid response from the API.";
+    }
+} else {
+    echo "Failed to retrieve data from the API.";
+}
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
