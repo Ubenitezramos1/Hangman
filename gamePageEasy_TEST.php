@@ -30,6 +30,7 @@ if ($response !== false) {
     exit; // Exit if request fails
 }
 
+
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $guess = strtoupper($_POST["guess"]);
