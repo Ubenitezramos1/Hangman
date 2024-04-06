@@ -21,14 +21,16 @@ if ($response !== false) {
 
         // Initialize blank spaces based on word length
         $blank_spaces = str_repeat("_", $word_length);
-        
-    } // Use the random word in your PHP code
-    echo "Random word: " . $randomWord;
-} else {
-    echo "Invalid response from the API.";
-} else {
-echo "Failed to retrieve data from the API.";
+
+    }
+        // Use the random word in your PHP code
+        echo "Random word: " . $randomWord;
+    } else {
+        echo "Invalid response from the API.";
+    } else {
+    echo "Failed to retrieve data from the API.";
 }
+?>
 
 
 // Check if the form is submitted
