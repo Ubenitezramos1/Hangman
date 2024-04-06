@@ -24,7 +24,7 @@ if ($response !== false) {
         $blank_spaces = str_repeat("_", $word_length);
 
         // Use the random word in your PHP code
-        echo "Random word: " . $randomWord;
+        echo "Random word: " . $word;
         
     } else {
         echo "Invalid response from the API.";
