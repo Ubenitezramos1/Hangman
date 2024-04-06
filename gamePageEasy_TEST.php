@@ -75,11 +75,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
 <div id="alphabet-buttons">
     <?php
-    // Display the alphabet buttons
-    foreach (range('A', 'Z') as $letter) {
-        echo "<button class='alphabet-btn' name='guess' value='$letter'>$letter</button>";
-    }
+    $rows = [
+        ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'],
+        ['J', 'K', 'L', 'M', 'N', 'O', 'P'],
+        ['Q', 'R', 'S', 'T', 'U'],
+        ['V', 'W', 'X'],
+        ['Y', 'Z']
+    ];
     ?>
 </div>
 </body>
 </html>
+$rows = [
+            ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'],
+            ['J', 'K', 'L', 'M', 'N', 'O', 'P'],
+            ['Q', 'R', 'S', 'T', 'U'],
+            ['V', 'W', 'X'],
+            ['Y', 'Z']
+        ];
