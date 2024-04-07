@@ -120,7 +120,7 @@ function displayLetterButtons() {
             <?= displayLetterButtons() ?>
         <?php endif; ?>
     </div>
-    <?php if ($_SESSION['winCount'] >= 6): ?>
+    <?php if ($_SESSION['winCount'] < 6): ?>
     <div class="attempts">Attempts left: <?= $_SESSION['attemptsLeft'] ?></div>
     <?php endif; ?>
 </form>
