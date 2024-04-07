@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if (isset($_COOKIE['username'])) {
+    header("Location: gameselect.php");
+    exit();
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
