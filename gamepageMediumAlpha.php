@@ -2,7 +2,7 @@
 session_start();
 
 function fetchRandomWord() {
-    $apiUrl = 'https://random-word-api.vercel.app/api?words=1&length=6'; // Adjust the query parameters as needed.
+    $apiUrl = 'https://random-word-api.vercel.app/api?words=1&length=5'; // Adjust the query parameters as needed.
     $json = file_get_contents($apiUrl);
     $words = json_decode($json, true);
     return strtoupper($words[0]); // Convert to uppercase to keep consistent with your original game logic.
@@ -79,7 +79,7 @@ function displayLetterButtons() {
 </head>
 <body id="body">
 <?php include 'header.php'; ?>
-<div class="mode">EASY</div>
+<div class="mode">MEDIUM</div>
 <div id="hangman">
     <div class="gallows-top"></div>
     <div class="gallows-stand"></div>
