@@ -1,21 +1,19 @@
 <?php
 session_start();
 
+function fetchRandomWord() {
+    $apiUrl = 'https://random-word-api.vercel.app/api?words=1&length=4'; // Adjust the query parameters as needed.
+    $json = file_get_contents($apiUrl);
+    $words = json_decode($json, true);
+    return strtoupper($words[0]); // Convert to uppercase to keep consistent with your original game logic.
+}
 function initializeGame() {
-    $selectedWords = ["DISCOVERY", "ELEPHANT", "MOLECULE", "BUTTERFLY", "COMPUTER", "TELEPHONE"]; // Your selected words
-
     if (!isset($_SESSION['winCount']) || isset($_POST['resetWinCount'])) {
         $_SESSION['winCount'] = 0;
         $_SESSION['startTime'] = time(); // Start the timer when the first game starts
     }
 
-    if (!isset($_SESSION['wordIndex'])) {
-        $_SESSION['wordIndex'] = 0;
-    } else {
-        $_SESSION['wordIndex'] = ($_SESSION['wordIndex'] + 1) % count($selectedWords);
-    }
-
-    $_SESSION['word'] = strtoupper($selectedWords[$_SESSION['wordIndex']]);
+    $_SESSION['word'] = fetchRandomWord();
     $_SESSION['guessedLetters'] = [];
     $_SESSION['attemptsLeft'] = 6;
     $_SESSION['gameOver'] = false;
@@ -115,7 +113,9 @@ function displayLetterButtons() {
             <?= displayLetterButtons() ?>
         <?php endif; ?>
     </div>
+    <?php if ($_SESSION['winCount'] < 6): ?> <!-- Only display attempts left if win count is less than 6 -->
     <div class="attempts">Attempts left: <?= $_SESSION['attemptsLeft'] ?></div>
+    <?php endif; ?>
 </form>
 </body>
 </html>
