@@ -3,10 +3,21 @@ session_start();
 
 function fetchRandomWord() {
     $apiUrl = 'https://random-word-api.vercel.app/api?words=1&length=4'; // Adjust the query parameters as needed.
-    $json = file_get_contents($apiUrl);
-    $words = json_decode($json, true);
-    return strtoupper($words[0]); // Convert to uppercase to keep consistent with your original game logic.
+
+    do {
+        $json = file_get_contents($apiUrl);
+        $words = json_decode($json, true);
+
+        foreach ($words as $word) {
+            // Count the number of vowels in the word
+            $vowelCount = preg_match_all('/[aeiou]/i', $word);
+            if ($vowelCount >= 2) {
+                return strtoupper($word); // Convert to uppercase to keep consistent with your original game logic.
+            }
+        }
+    } while (true); // Keep looping until a suitable word is found
 }
+
 function initializeGame() {
     if (!isset($_SESSION['winCount']) || isset($_POST['resetWinCount'])) {
         $_SESSION['winCount'] = 0;
@@ -15,7 +26,7 @@ function initializeGame() {
 
     $_SESSION['word'] = fetchRandomWord();
     $_SESSION['guessedLetters'] = [];
-    $_SESSION['attemptsLeft'] = 6;
+    $_SESSION['attemptsLeft'] = 12;
     $_SESSION['gameOver'] = false;
     $_SESSION['gameWon'] = false;
 }
