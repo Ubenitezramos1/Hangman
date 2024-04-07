@@ -284,3 +284,7 @@ button:hover {
   color: #FFB261;
   background-color: #fdfdfdd5; /* Transparent background */
 }
+
+.alphabet-btn.guessed {
+  visibility: hidden; 
+}
