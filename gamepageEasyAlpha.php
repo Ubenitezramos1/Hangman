@@ -81,6 +81,7 @@ function displayLetterButtons() {
 </head>
 <body id="body">
 <?php include 'header.php'; ?>
+<div class="mode">EASY</div>
 <div id="hangman">
     <div class="gallows-top"></div>
     <div class="gallows-stand"></div>
@@ -98,24 +99,23 @@ function displayLetterButtons() {
     </div>
     <div id="alphabet-buttons">
         <?php if ($_SESSION['gameWon']): ?>
-            <div>Game Finished!</div>
+            <div class="game-message">Game Finished!</div>
             <?php if ($_SESSION['winCount'] >= 6): 
                 //reset the win count
-                $_SESSION['winCount'] = 0;
-            ?>
-                <div>Exit now. You have won 6 times!</div>
+                $_SESSION['winCount'] = 0;?>
+                <div class="game-message">Exit now. You have won 6 times!</div>
                 <a href="leaderboard.php" class="button">Go to Leaderboard</a>
             <?php else: ?>
                 <button type="submit" name="newGame">Start New Game</button>
             <?php endif; ?>
         <?php elseif ($_SESSION['gameOver']): ?>
-            <div>Game Over! The word was: <?= htmlspecialchars($_SESSION['word']) ?></div>
+            <div class="game-message">Game Over! The word was: <?= htmlspecialchars($_SESSION['word']) ?></div>
             <button type="submit" name="newGame">Start New Game</button>
         <?php else: ?>
             <?= displayLetterButtons() ?>
         <?php endif; ?>
     </div>
-    <div>Attempts left: <?= $_SESSION['attemptsLeft'] ?></div>
+    <div class="attempts">Attempts left: <?= $_SESSION['attemptsLeft'] ?></div>
 </form>
 </body>
 </html>
