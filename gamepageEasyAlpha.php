@@ -104,13 +104,13 @@ function displayLetterButtons() {
                 //reset the win count
                 $_SESSION['winCount'] = 0;?>
                 <div class="game-message">Exit now. You have won 6 times!</div>
-                <a href="leaderboard.php" class="button">Go to Leaderboard</a>
+                <a href="leaderboard.php" class="leaderboardLink">Go to Leaderboard</a>
             <?php else: ?>
-                <button type="submit" name="newGame">Start New Game</button>
+                <button id="newGame" type="submit" name="newGame">Start Next Level</button>
             <?php endif; ?>
         <?php elseif ($_SESSION['gameOver']): ?>
             <div class="game-message">Game Over! The word was: <?= htmlspecialchars($_SESSION['word']) ?></div>
-            <button type="submit" name="newGame">Start New Game</button>
+            <button id="newGame" type="submit" name="newGame">Retry?</button>
         <?php else: ?>
             <?= displayLetterButtons() ?>
         <?php endif; ?>

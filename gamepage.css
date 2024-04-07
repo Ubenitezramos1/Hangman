@@ -136,6 +136,24 @@ html {
   background-color: black;
 }
 
+#newGame{
+  padding: 12px 24px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  font-size: 18px;
+  background-color: #ff6361;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 120px;
+}
+
+#newGame:hover {
+  background-color: #0056b3;
+}
+
 #alphabet-buttons {
   text-align: center; /* Center-align the alphabet buttons */
   margin: auto;
@@ -181,7 +199,11 @@ button:hover {
 .game-message {
   text-align: center; /* Center-align the game-over and game-won messages */
   margin-bottom: 20px; /* Add some space below the messages */
+  font-family: 'ArchivoBlack';
+  font-weight: lighter;
+  font-size: 24px;
 }
+
 
 
 /*logout header css*/
@@ -217,4 +239,28 @@ button:hover {
 
 #logoutHeader:hover a {
   color: #f9e79f;
+}
+
+/*leaderboard link*/
+.leaderboardLink{
+  width: 200px;
+  text-decoration: none;
+  text-align: center;
+  color: #ff6361;
+  font-size: 20px;
+  font-family: 'ArchivoBlack';
+  font-weight: lighter;
+  background-color: #ffffffcc; /* Transparent background */
+  border: solid 2px #ff9896;
+  padding: 15px;
+  border-radius: 20px;
+  transition-duration: 0.3s;
+  margin-top: 20px;
+}
+
+.leaderboardLink:hover{
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+  color: #FFB261;
+  background-color: #fdfdfdd5; /* Transparent background */
 }
