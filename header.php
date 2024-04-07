@@ -1,6 +1,8 @@
 <?php
     session_start();
 
+    $currentPage = basename($_SERVER['PHP_SELF']);
+
     if (isset($_COOKIE['username'])) {
         $loggedInUser = $_COOKIE['username'];
     } else {
@@ -8,11 +10,13 @@
     }
 ?>
 <div id="header">
+    <?php if ($currentPage !== 'gameselect.php') { ?>
     <div id="goBack">
             <a href="goBack.php">
                 <span>Go Back</span>
             </a>
     </div>
+    <?php } ?>
 
     <div id="logout">
         <?php if ($loggedInUser) { ?>
