@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <?php include 'header.php'; ?>
     <h1 id="title">Leaderboard</h1>
     <div class="leaderboard">
         <div id="easyLeader">

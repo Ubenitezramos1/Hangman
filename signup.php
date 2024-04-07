@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div id="content">
         <legend>Signup</legend>
         <form method="post">
-            <?php if (isset($error)) { echo '<div class="loginError">' . $error . '</div>'; } ?>
+            <?php if (isset($error)) { echo '<div class="error">' . $error . '</div>'; } ?>
             <div id="inputBox">
                 <input type="text" name="username" placeholder="Username" required>
             </div>

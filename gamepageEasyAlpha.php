@@ -80,6 +80,7 @@ function displayLetterButtons() {
     <link href="gamepage.css" rel="stylesheet">
 </head>
 <body id="body">
+<?php include 'header.php'; ?>
 <div id="hangman">
     <div class="gallows-top"></div>
     <div class="gallows-stand"></div>

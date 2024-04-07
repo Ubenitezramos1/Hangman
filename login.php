@@ -7,7 +7,7 @@ $file_path = "users.txt";
 
 // Check if the user is already logged in
 if (isset($_COOKIE['username'])) {
-    header("Location: gamepageEasyAlpha.php");
+    header("Location: gameselect.php");
     exit();
 }
 
@@ -17,7 +17,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     } else {
         // Set a cookie to remember the user
         setcookie("username", $username, time() + (86400 * 30), "/");
-        header("Location: gamepageEasyAlpha.php");
+        header("Location: gameselect.php");
         exit();
     }
 }
@@ -50,7 +50,7 @@ function userCheck($username, $password, $file_path) {
     <div id="content">
         <legend>Login</legend>
         <form method="post">
-            <?php if (isset($failed) && $failed == true) { echo '<div class="loginError">Invalid Username or Password</div>'; } ?>
+            <?php if (isset($failed) && $failed == true) { echo '<div class="error">Invalid Username or Password</div>'; } ?>
             <div id="inputBox">
                 <input type="text" name="username" placeholder="Username" required>
             </div>
