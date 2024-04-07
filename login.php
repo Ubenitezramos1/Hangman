@@ -7,7 +7,7 @@ $file_path = "users.txt";
 
 // Check if the user is already logged in
 if (isset($_COOKIE['username'])) {
-    header("Location: gameselect.php");
+    header("Location: gamepageEasyAlpha.php");
     exit();
 }
 
@@ -17,7 +17,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     } else {
         // Set a cookie to remember the user
         setcookie("username", $username, time() + (86400 * 30), "/");
-        header("Location: gameselect.php");
+        header("Location: gamepageEasyAlpha.php");
         exit();
     }
 }
