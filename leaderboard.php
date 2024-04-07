@@ -23,15 +23,12 @@
                 </thead>
                 <tbody>
                 <?php
-                    // Read data from easyLeader.txt and sort by time score
                     $leaderboardData = file('easyLeader.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-                    // Sorting based on time score
                     usort($leaderboardData, function($a, $b) {
                         $timeA = explode(',', $a)[1];
                         $timeB = explode(',', $b)[1];
                         return $timeA - $timeB;
                     });
-                    // Display leaderboard data
                     $rank = 1;
                     foreach ($leaderboardData as $line) {
                         list($username, $timeScore) = explode(',', $line);
@@ -59,15 +56,12 @@
                 </thead>
                 <tbody>
                 <?php
-                    // Read data from easyLeader.txt and sort by time score
                     $leaderboardData = file('mediumLeader.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-                    // Sorting based on time score
                     usort($leaderboardData, function($a, $b) {
                         $timeA = explode(',', $a)[1];
                         $timeB = explode(',', $b)[1];
                         return $timeA - $timeB;
                     });
-                    // Display leaderboard data
                     $rank = 1;
                     foreach ($leaderboardData as $line) {
                         list($username, $timeScore) = explode(',', $line);
@@ -94,17 +88,14 @@
                     </tr>
                 </thead>
                 <?php
-                    // Read data from hardLeader.txt if the file exists
                     if (file_exists('hardLeader.txt')) {
                         $leaderboardData = file('hardLeader.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
                         if ($leaderboardData !== false) {
-                            // Sorting based on time score
                             usort($leaderboardData, function($a, $b) {
                                 $timeA = explode(',', $a)[1];
                                 $timeB = explode(',', $b)[1];
                                 return $timeA - $timeB;
                             });
-                            // Display leaderboard data
                             $rank = 1;
                             foreach ($leaderboardData as $line) {
                                 list($username, $timeScore) = explode(',', $line);

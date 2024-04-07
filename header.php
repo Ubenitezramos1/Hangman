@@ -1,7 +1,6 @@
 <?php
     session_start();
 
-    // Check if the user is logged in
     if (isset($_COOKIE['username'])) {
         $loggedInUser = $_COOKIE['username'];
     } else {

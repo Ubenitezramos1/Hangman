@@ -5,7 +5,6 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 $file_path = "users.txt";
 
-// Check if the user is already logged in
 if (isset($_COOKIE['username'])) {
     header("Location: gameselect.php");
     exit();
@@ -15,7 +14,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     if (!userCheck($username, $password, $file_path)) {
         $failed = true;
     } else {
-        // Set a cookie to remember the user
         setcookie("username", $username, time() + (86400 * 30), "/");
         header("Location: gameselect.php");
         exit();
@@ -27,7 +25,6 @@ function userCheck($username, $password, $file_path) {
     $lines = explode("\n", $file_contents);
     foreach ($lines as $line) {
         $data = explode(",", $line);
-        // Check if the user exists and the password matches
         if (isset($data[0]) && strtolower(trim($data[0])) === strtolower(trim($username))) {
             if (isset($data[1]) && $data[1] === $password) {
                 return true;

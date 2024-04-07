@@ -1,17 +1,14 @@
 <?php
 session_start();
 
-// Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
     $confirm_password = $_POST["confirm_password"];
 
-    // Check if the passwords match
     if ($password !== $confirm_password) {
         $error = "Passwords do not match.";
     } else {
-        // Store the username and password in the user.txt file
         $file_path = "users.txt";
         $file_contents = file_get_contents($file_path);
         $lines = explode("\n", $file_contents);
@@ -26,7 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!$found) {
             $file_contents .= "\n" . $username . "," . $password;
             file_put_contents($file_path, $file_contents);
-            // Set a cookie to remember the user
             setcookie("username", $username, time() + (86400 * 30), "/");
             header("Location: gameselect.php");
             exit();

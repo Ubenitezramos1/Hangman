@@ -2,31 +2,20 @@
 session_start();
 
 function fetchRandomWord() {
-    $apiUrl = 'https://random-word-api.vercel.app/api?words=1&length=4'; // Adjust the query parameters as needed.
-
-    do {
-        $json = file_get_contents($apiUrl);
-        $words = json_decode($json, true);
-
-        foreach ($words as $word) {
-            // Count the number of vowels in the word
-            $vowelCount = preg_match_all('/[aeiou]/i', $word);
-            if ($vowelCount >= 2) {
-                return strtoupper($word); // Convert to uppercase to keep consistent with your original game logic.
-            }
-        }
-    } while (true); // Keep looping until a suitable word is found
+    $apiUrl = 'https://random-word-api.vercel.app/api?words=1&length=6';
+    $json = file_get_contents($apiUrl);
+    $words = json_decode($json, true);
+    return strtoupper($words[0]);
 }
-
 function initializeGame() {
     if (!isset($_SESSION['winCount']) || isset($_POST['resetWinCount'])) {
         $_SESSION['winCount'] = 0;
-        $_SESSION['startTime'] = time(); // Start the timer when the first game starts
+        $_SESSION['startTime'] = time();
     }
 
     $_SESSION['word'] = fetchRandomWord();
     $_SESSION['guessedLetters'] = [];
-    $_SESSION['attemptsLeft'] = 12;
+    $_SESSION['attemptsLeft'] = 6;
     $_SESSION['gameOver'] = false;
     $_SESSION['gameWon'] = false;
 }
@@ -49,10 +38,8 @@ if (isset($_POST['guess']) && !$_SESSION['gameOver']) {
         $_SESSION['gameWon'] = true;
         $_SESSION['winCount']++;
         if ($_SESSION['winCount'] >= 6) {
-            // Stop the timer when all six wins are completed
             $endTime = time();
-            $timeScore = $endTime - $_SESSION['startTime']; // Calculate time score
-            // Store username and time score in easyLeader.txt
+            $timeScore = $endTime - $_SESSION['startTime'];
             $username = isset($_COOKIE['username']) ? $_COOKIE['username'] : 'Guest';
             $leaderData = "$username,$timeScore\n";
             file_put_contents('easyLeader.txt', $leaderData, FILE_APPEND);
@@ -90,7 +77,7 @@ function displayLetterButtons() {
 </head>
 <body id="body">
 <?php include 'header.php'; ?>
-<div class="mode">EASY</div>
+<div class="mode">MEDIUM</div>
 <div id="hangman">
     <div class="gallows-top"></div>
     <div class="gallows-stand"></div>
@@ -110,7 +97,6 @@ function displayLetterButtons() {
         <?php if ($_SESSION['gameWon']): ?>
             <div class="game-message">Game Finished!</div>
             <?php if ($_SESSION['winCount'] >= 6): 
-                //reset the win count
                 $_SESSION['winCount'] = 0;?>
                 <div class="game-message">Exit now. You have won 6 times!</div>
                 <a href="leaderboard.php" class="leaderboardLink">Go to Leaderboard</a>
@@ -124,7 +110,7 @@ function displayLetterButtons() {
             <?= displayLetterButtons() ?>
         <?php endif; ?>
     </div>
-    <?php if ($_SESSION['winCount'] < 6): ?> <!-- Only display attempts left if win count is less than 6 -->
+    <?php if ($_SESSION['winCount'] < 6): ?>
     <div class="attempts">Attempts left: <?= $_SESSION['attemptsLeft'] ?></div>
     <?php endif; ?>
 </form>

@@ -40,7 +40,7 @@ h2{
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -162,7 +162,7 @@ input[type="submit"]:hover{
     position: fixed;
     top: 0;
     right: 400px;
-    animation: swing 2s infinite alternate; /* Adjust duration as needed */
+    animation: swing 2s infinite alternate;
     transform-origin: top right;
     width: 100px;
     height: auto px;
@@ -174,7 +174,6 @@ input[type="submit"]:hover{
     100% { transform: rotate(10deg); }
 }
 
-/* Style for the leaderboard */
 .leaderboard {
     display: flex;
     justify-content: space-around;
@@ -229,7 +228,7 @@ input[type="submit"]:hover{
     font-size: 20px;
     font-family: 'ArchivoBlack';
     font-weight: lighter;
-    background-color: #ffffffcc; /* Transparent background */
+    background-color: #ffffffcc;
     border: solid 2px #ff9896;
     padding: 15px;
     border-radius: 20px;
@@ -241,10 +240,8 @@ input[type="submit"]:hover{
     transform: scale(1.1);
     transition-duration: 0.3s;
     color: #FFB261;
-    background-color: #fdfdfdd5; /* Transparent background */
+    background-color: #fdfdfdd5;
 }
-
-/*gameselectpage*/
 
 .container {
     text-align: center;

@@ -1,7 +1,6 @@
 <?php
     session_start();
 
-    // Reset session variables to default values
     $_SESSION['winCount'] = null;
     $_SESSION['startTime'] = null;
     $_SESSION['wordIndex'] = null;

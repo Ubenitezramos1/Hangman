@@ -16,22 +16,17 @@
         <h2>Select Difficulty Mode</h2>
 
         <?php
-        // Check if the form is submitted
         if (isset($_POST['start_game'])) {
-            // Check if the difficulty is selected
             if (!empty($_POST['difficulty'])) {
-                // Redirect to the corresponding difficulty page
                 $difficulty = $_POST['difficulty'];
-                $pageName = "gamepage{$difficulty}Alpha.php";
+                $pageName = "gamepage{$difficulty}.php";
                 if (file_exists($pageName)) {
                     header("Location: $pageName");
                     exit;
                 } else {
-                    // Display error message if corresponding difficulty page not found
                     echo '<div class="error">Error: Difficulty page not found.</div>';
                 }
             } else {
-                // Display error message if difficulty is not selected
                 echo '<div class="error">Please select a difficulty.</div>';
             }
         }
