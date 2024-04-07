@@ -18,9 +18,14 @@ if ($response !== false) {
 
         // Store the word in session to track it throughout the game
         $_SESSION['word'] = $word;
+        
 
         // Initialize blank spaces based on word length
         $blank_spaces = str_repeat("_", $word_length);
+
+        // Use the random word in your PHP code
+        echo "Random word: " . $word;
+        
     } else {
         echo "Invalid response from the API.";
         exit; // Exit if response is invalid
@@ -29,7 +34,6 @@ if ($response !== false) {
     echo "Failed to retrieve data from the API.";
     exit; // Exit if request fails
 }
-
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
