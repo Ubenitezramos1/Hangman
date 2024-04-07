@@ -78,6 +78,9 @@ function displayLetterButtons() {
     }
     echo "</div>";
 }
+
+$attemp = 0;
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -105,10 +108,11 @@ function displayLetterButtons() {
     </div>
     <div id="alphabet-buttons">
         <?php if ($_SESSION['gameWon']): ?>
-            <div class="game-message">Game Finished!</div>
+            <div class="game-message">Level Finished!</div>
             <?php if ($_SESSION['winCount'] >= 6): 
-                $_SESSION['winCount'] = 0;?>
-                <div class="game-message">Exit now. You have won 6 times!</div>
+                $_SESSION['winCount'] = 0;
+                $attemp = 1;?>
+                <div class="game-message">Game is finished. You have won 6 times!</div>
                 <a href="leaderboard.php" class="leaderboardLink">Go to Leaderboard</a>
             <?php else: ?>
                 <button id="newGame" type="submit" name="newGame">Start Next Level</button>
@@ -120,7 +124,7 @@ function displayLetterButtons() {
             <?= displayLetterButtons() ?>
         <?php endif; ?>
     </div>
-    <?php if ($_SESSION['winCount'] < 6): ?>
+    <?php if ($attemp == 0): ?>
     <div class="attempts">Attempts left: <?= $_SESSION['attemptsLeft'] ?></div>
     <?php endif; ?>
 </form>
