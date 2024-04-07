@@ -143,4 +143,46 @@ input[type="submit"]:hover{
     50% { transform: rotate(-10deg); }
     100% { transform: rotate(10deg); }
 }
-  
+
+/* Style for the leaderboard */
+.leaderboard {
+    display: flex;
+    justify-content: space-around;
+}
+
+.leaderboard div {
+    width: 30%; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard h2 {
+    margin-top: 0;
+}
+
+.leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard th {
+    background-color: #f2f2f2;
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.leaderboard td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.leaderboard tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.leaderboard tbody tr:nth-child(even) {
+    background-color: #fff;
+}

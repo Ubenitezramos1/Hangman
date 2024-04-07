@@ -6,6 +6,7 @@ function initializeGame() {
 
     if (!isset($_SESSION['winCount']) || isset($_POST['resetWinCount'])) {
         $_SESSION['winCount'] = 0;
+        $_SESSION['startTime'] = time(); // Start the timer when the first game starts
     }
 
     if (!isset($_SESSION['wordIndex'])) {
@@ -38,6 +39,15 @@ if (isset($_POST['guess']) && !$_SESSION['gameOver']) {
     if (!$_SESSION['gameOver'] && !in_array('_', str_split(getDisplayedWord()))) {
         $_SESSION['gameWon'] = true;
         $_SESSION['winCount']++;
+        if ($_SESSION['winCount'] >= 6) {
+            // Stop the timer when all six wins are completed
+            $endTime = time();
+            $timeScore = $endTime - $_SESSION['startTime']; // Calculate time score
+            // Store username and time score in easyLeader.txt
+            $username = isset($_COOKIE['username']) ? $_COOKIE['username'] : 'Guest';
+            $leaderData = "$username,$timeScore\n";
+            file_put_contents('easyLeader.txt', $leaderData, FILE_APPEND);
+        }
     }
 }
 
@@ -88,7 +98,10 @@ function displayLetterButtons() {
     <div id="alphabet-buttons">
         <?php if ($_SESSION['gameWon']): ?>
             <div>Game Finished!</div>
-            <?php if ($_SESSION['winCount'] >= 6): ?>
+            <?php if ($_SESSION['winCount'] >= 6): 
+                //reset the win count
+                $_SESSION['winCount'] = 0;
+            ?>
                 <div>Exit now. You have won 6 times!</div>
                 <a href="leaderboard.php" class="button">Go to Leaderboard</a>
             <?php else: ?>
