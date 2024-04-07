@@ -33,11 +33,11 @@ h2{
 }
 
 #content{
-    font-family: 'ShadowsIntoLight';
+    font-family: Arial, Helvetica, sans-serif;
 	width: 300px;
     margin: 0 auto;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
@@ -103,19 +103,13 @@ input[type="submit"]:hover{
     color: red;
 }
 
-#logoutHeader {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background-color: #2c3e50 ;
-    border-radius: 20px;
-    padding: 10px 20px;
+#header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
     z-index: 1;
   }
   
-  #logoutHeader a {
+  #header a {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
@@ -124,23 +118,50 @@ input[type="submit"]:hover{
     align-items: center;
   }
   
-  #logoutHeader span {
+  #header span {
     margin-right: 8px;
   }
   
-  #logoutHeader:hover {
+  #logout:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.20);
   }
   
-  #logoutHeader:hover a {
+  #logout:hover a {
     color: #f9e79f;
+  }
+
+  #goBack:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.20);
+  }
+  
+  #goBack:hover a {
+    color: #f9e79f;
+  }
+
+  #logout{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #2c3e50 ;
+    border-radius: 20px;
+    padding: 10px 20px;
+  }
+
+  #goBack{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #2c3e50 ;
+    border-radius: 20px;
+    padding: 10px 20px;
   }
 
 .swinging-image {
     position: fixed;
     top: 0;
-    right: 0;
+    right: 400px;
     animation: swing 2s infinite alternate; /* Adjust duration as needed */
     transform-origin: top right;
     width: 100px;
@@ -186,6 +207,10 @@ input[type="submit"]:hover{
 .leaderboard td {
     padding: 8px;
     border-bottom: 1px solid #ddd;
+}
+
+.leaderboard tbody{
+    font-size: 24px;
 }
 
 .leaderboard tbody tr:nth-child(odd) {

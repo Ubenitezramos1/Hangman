@@ -207,19 +207,13 @@ button:hover {
 
 
 /*logout header css*/
-#logoutHeader {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  background-color: #2c3e50 ;
-  border-radius: 20px;
-  padding: 10px 20px;
+#header {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   z-index: 1;
 }
 
-#logoutHeader a {
+#header a {
   color: #fff;
   text-decoration: none;
   font-size: 16px;
@@ -228,19 +222,45 @@ button:hover {
   align-items: center;
 }
 
-#logoutHeader span {
+#header span {
   margin-right: 8px;
 }
 
-#logoutHeader:hover {
+#logout:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.20);
 }
 
-#logoutHeader:hover a {
+#logout:hover a {
   color: #f9e79f;
 }
 
+#goBack:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.20);
+}
+
+#goBack:hover a {
+  color: #f9e79f;
+}
+
+#logout{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #2c3e50 ;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+#goBack{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #2c3e50 ;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
 /*leaderboard link*/
 .leaderboardLink{
   width: 200px;
