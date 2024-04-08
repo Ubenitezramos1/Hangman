@@ -14,7 +14,7 @@
         <h1 id="title">Web Wizard's Hangman</h1>
         <div id="selectMode">
         <h2>Select Difficulty Mode</h2>
-        <p class="instructions"><span class="bold">Instructions:</span><br>Choose a difficulty mode. <span class="bold">Easy</span> will have 
+        <p class="instructions"><span class="bold">Instructions:</span><br><br>Choose a difficulty mode. <span class="bold">Easy</span> will have 
         <span class="bold">4</span> letter words, <span class="bold">Medium</span> will have <span class="bold">6</span>, and <span class="bold">Hard</span> will have <span class="bold">8</span>. 
         You will have <span class="bold">12</span> attempts to guess a word correctly. To be scored on the leaderboard, you will have to win a total of <span class="bold">6</span> times. 
         <span class="bold">Hint:</span> You are scored by the amount of time it takes for you to complete all <span class="bold">6 wins</span>. 
