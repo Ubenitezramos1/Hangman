@@ -2,7 +2,7 @@
 session_start();
 
 function fetchRandomWord() {
-    $apiUrl = 'https://random-word-api.vercel.app/api?words=1&length=6';
+    $apiUrl = 'https://random-word-api.vercel.app/api?words=1&length=4';
 
     do {
         $json = file_get_contents($apiUrl);
