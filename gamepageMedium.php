@@ -51,7 +51,7 @@ if (isset($_POST['guess']) && !$_SESSION['gameOver']) {
             $endTime = time();
             $timeScore = $endTime - $_SESSION['startTime'];
             $username = isset($_COOKIE['username']) ? $_COOKIE['username'] : 'Guest';
-            $leaderData = "$username,$timeScore\n";
+            $leaderData = "\n$username,$timeScore";
             file_put_contents('mediumLeader.txt', $leaderData, FILE_APPEND);
         }
     }
