@@ -32,7 +32,7 @@ html {
   position: relative;
   width: 200px;
   height: 300px;
-  margin: 100px auto; /* Center the hangman game vertically and horizontally */
+  margin: 100px auto;
   scale: 1.2;
 }
 
@@ -124,10 +124,10 @@ html {
 }
 
 #dashes {
-  text-align: center; /* Center-align the displayed word */
+  text-align: center;
   font-size: 40px;
   font-family: 'ShadowsIntoLight';
-  margin-bottom: 20px; /* Add some space between the displayed word and buttons */
+  margin-bottom: 20px;
 }
 
 .dash {
@@ -155,24 +155,24 @@ html {
 }
 
 #alphabet-buttons {
-  text-align: center; /* Center-align the alphabet buttons */
+  text-align: center;
   margin: auto;
-  margin-bottom: 20px; /* Add some space between the alphabet buttons and attempts text */
-  width: 1000px; /* Set a fixed width */
+  margin-bottom: 20px;
+  width: 1000px;
 }
 
 
 .button-row {
   margin: auto;
   display: flex;
-  justify-content: center; /* Centers the buttons within each row */
-  gap: 12px; /* Space between buttons */
-  flex-wrap: wrap; /* Allow buttons to wrap to the next row */
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 button {
   display: inline-block;
-  background-color: #f0f0f0; /* Green */
+  background-color: #f0f0f0;
   color: #2c3e50;
   padding: 10px 10px 10px 10px;
   text-align: center;
@@ -186,27 +186,25 @@ button {
 }
 
 button:hover {
-  background-color: #e9e9e9; /* Darker green on hover */
+  background-color: #e9e9e9;
 }
 
 .attempts {
-  text-align: center; /* Center-align the attempts text */
+  text-align: center;
   font-family: 'ArchivoBlack';
   font-weight: lighter;
   font-size: 24px;
 }
 
 .game-message {
-  text-align: center; /* Center-align the game-over and game-won messages */
-  margin-bottom: 20px; /* Add some space below the messages */
+  text-align: center;
+  margin-bottom: 20px;
   font-family: 'ArchivoBlack';
   font-weight: lighter;
   font-size: 24px;
 }
 
 
-
-/*logout header css*/
 #header {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
@@ -270,7 +268,7 @@ button:hover {
   font-size: 20px;
   font-family: 'ArchivoBlack';
   font-weight: lighter;
-  background-color: #ffffffcc; /* Transparent background */
+  background-color: #ffffffcc;
   border: solid 2px #ff9896;
   padding: 15px;
   border-radius: 20px;
@@ -282,7 +280,7 @@ button:hover {
   transform: scale(1.1);
   transition-duration: 0.3s;
   color: #FFB261;
-  background-color: #fdfdfdd5; /* Transparent background */
+  background-color: #fdfdfdd5;
 }
 
 .alphabet-btn.guessed {
