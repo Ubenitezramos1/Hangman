@@ -1,7 +1,7 @@
 # Hangman
 An interactive hangman game using PHP, HTML, and CSS.
 
-##Participants
+## Participants
 Uriel Benitez-Ramos
 Adia Williams
 Aneesh Pallapolu
